@@ -1,0 +1,15 @@
+{
+  "name": "edu-api",
+  "version": "1.0.0",
+  "description": "automation testing API",
+  "main": "index.js",
+  "author": "sitikhtmh",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^12.7.0"
+  },
+    "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  }
+}
