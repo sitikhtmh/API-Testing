@@ -2,8 +2,13 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
+    env: {
+      apiUrl: "https://reqres.in",
+      userEmail: "eve.holt@reqres.in",
+      userPassword: "cityslica",
+    },
+    e2e: {
+      setupNodeEvents(on, config) {},
     },
   },
 });
