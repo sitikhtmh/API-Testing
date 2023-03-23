@@ -7,15 +7,14 @@ describe("Validation Body PokeAPI", () => {
       .then((response) => {
         expect(response.body.name).to.eq("ditto");
 
-    cy.request("https://pokeapi.co/api/v2/pokemon")
-      .as("pokemon")
-      .then((response) => {
-         expect(response.body.count).to.eq(1281);
-    });
-    cy.get('@pokemon').its('status').should('equal', 200)
+        cy.request("https://pokeapi.co/api/v2/pokemon")
+          .as("pokemon")
+          .then((response) => {
+            expect(response.body.count).to.eq(1281);
+          });
+        cy.get("@pokemon").its("status").should("equal", 200);
 
-    cy.get("@pokemon").its("headers").its("content-type").should("include", "application/json; charset=utf-8");
-    
-  });
+        cy.get("@pokemon").its("headers").its("content-type").should("include", "application/json; charset=utf-8");
+      });
   });
 });
